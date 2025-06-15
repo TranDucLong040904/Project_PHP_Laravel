@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #cdbaba;
+    padding: 0 20px;
+    height: 70px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+i {
+    padding-left: 8px;
+}
+
+#header > img {
+    height: 70px;
+    width: auto;
+}
+
+#nav {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+#nav > li {
+    position: relative;
+}
+
+#nav > li > a {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 70px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#nav li:hover > a {
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav a {
+    padding: 10px 12px;
+    color: #000;
+    display: block;
+    text-decoration: none;
+}
+
+#nav .subnav li:hover a {
+    background-color: #ccc;
+}
+
+/* CSS Form login */
+/* Căn chỉnh cho form */
+.form {
+    max-width: 400px;
+    margin: 150px auto; /* Để cho nó cách xa đầu trang */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around; /* Giữa hai tab */
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1; /* Cho tab có chiều rộng bằng nhau */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border-radius: 5px 5px 0 0; /* Góc trên cùng */
+}
+
+.tab-btn.active {
+    background-color: #0056b3;
+    color: white;
+    border-bottom: 2px solid #0056b3;
+}
+
+.tab-btn:hover {
+    background-color: #ccc;
+}
+
+/* Form containers */
+.form-container {
+    padding: 20px;
+}
+
+.alert-success {
+    text-align: center;
+    color: green;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.alert-error {
+    text-align: center;
+    color: red;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+#user-input, #password-input {
+    position: relative;
+}
+
+#user-input > i, #password-input > i {
+    color: #ccc;
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    margin: 8px 2px 4px 7px;
+    z-index: 3;
+    width: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-left: 42px;
+}
+
+#new-name, #new-email, #new-password, #confirm-password {
+    padding-left: 5px;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form a {
+    display: flex;
+    justify-content: center;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.register-form {
+    display: flex;
+    justify-content: center;
+}
+
+.alert-error li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-title {
+    font-size: 1.5em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+footer ul li {
+    margin: 10px 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: thin;
+}
+
+footer ul li a:hover {
+    color: #a5a3a3;
+}
+
+.socials {
+    display: flex;
+    justify-content: center; 
+    margin-block: 20px;
+    width: 100%;
+}
+
+.socials a {
+    color: #a5a3a3; 
+    font-size: 1.1em;
+}
+
+.socials a:hover {
+     color: #fff
+}
+
+.info {
+    display: flex;
+    justify-content: center; 
+    margin-block: 20px;
+    gap: 20px;
+}
+
+.footer-list_header {
+    font-size: 0.9em;
+    color: #949393;
+}
+
+@media screen and (max-width: 600px) {
+    .info {
+        flex-direction: column;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
