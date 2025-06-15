@@ -24,7 +24,7 @@ WebCinema là một hệ thống đặt vé xem phim trực tuyến, hỗ trợ 
 
 ## ⚙️ Yêu Cầu Hệ Thống
 
-- PHP >= 8.x  
+- PHP >= 8.x 
 - Composer  
 - MySQL  
 - XAMPP
@@ -45,3 +45,54 @@ php artisan serve
 ```
 ---
 ## 🗃️ Cấu Trúc Cơ Sở Dữ Liệu
+
+
+
+---
+## 🖼️ Giao Diện Chức Năng
+
+ ### 🔐 Admin
+
+ - **Quản lý phim**  
+
+
+
+ - **Quản lý lịch chiếu**  
+  ![](./screenshots/admin_quan_ly_lich.png)
+
+ - **Quản lý người dùng**  
+  ![](./screenshots/admin_quan_ly_nguoi_dung.png)
+
+---
+
+ ### 👤 Người Dùng
+
+ - **Đăng nhập**  
+  ![](./screenshots/user_login.png)
+
+ - **Trang chủ**  
+  ![](./screenshots/user_home.png)
+
+ - **Xem lịch chiếu**  
+  ![](./screenshots/user_lich_chieu.png)
+
+ - **Đặt vé**  
+  ![](./screenshots/user_dat_ve.png)
+
+ - **Xem vé đã đặt**  
+  ![](./screenshots/user_ve_da_dat.png)
+
+
+---
+## 🔒 Bảo Mật
+- 1
+- 2
+- 3
+
+
+---
+
+## 🔗 Liên Kết
+- 🔗 GitHub:
+- ▶️ YouTube Demo:
+
