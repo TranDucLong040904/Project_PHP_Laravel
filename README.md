@@ -42,3 +42,6 @@ composer install
 # Import file SQL nếu có, hoặc dùng migrate:
 
 php artisan serve
+```
+---
+## 🗃️ Cấu Trúc Cơ Sở Dữ Liệu
