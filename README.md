@@ -2,8 +2,8 @@
 
 WebCinema là một hệ thống đặt vé xem phim trực tuyến, hỗ trợ người dùng tìm kiếm phim, đặt vé và quản lý suất chiếu. Dự án này được xây dựng với mục đích mô phỏng quy trình vận hành cơ bản của một rạp chiếu phim.
 
----
 
+---
 ## 🚀 Tính Năng Chính
 ### 🔐 Admin
 - Đăng kí - Đăng nhập
@@ -22,26 +22,24 @@ WebCinema là một hệ thống đặt vé xem phim trực tuyến, hỗ trợ 
 - Đặt vé
 - Đổi mật khẩu  
 
+
 ---
-
 ## 🛠️ Công Nghệ Sử Dụng
-
 - **Backend:** Laravel, PHP 8.x  
 - **Frontend:** HTML/CSS, Bootstrap  
 - **Cơ sở dữ liệu:** MySQL  
 - **Khác:** Composer  
 
+
 ---
-
 ## ⚙️ Yêu Cầu Hệ Thống
-
 - PHP >= 8.x 
 - Composer  
 - MySQL  
 - XAMPP
 
----
 
+---
 ## 🧩 Cài Đặt & Khởi Chạy
 
 ```bash
@@ -54,11 +52,14 @@ composer install
 
 php artisan serve
 ```
+
+
 ---
 ## 🗃️ Sơ đồ khối
    ![image](https://github.com/user-attachments/assets/df8747f2-d454-473b-afcd-35e4fa816f7c)
----
 
+   
+---
 ## ⚙️Sơ đồ chức năng
 ### 🔐 Admin
   ![image](https://github.com/user-attachments/assets/44d19e96-6cd5-4c89-935c-c9282106288c)
@@ -68,6 +69,7 @@ php artisan serve
 
 ### Guest 
   ![image](https://github.com/user-attachments/assets/d89621d8-3359-4229-8f2a-3b63ba3df540)
+
 
 ---
 ## 🧠Sơ đồ thuật toán
@@ -90,19 +92,20 @@ php artisan serve
  ![image](https://github.com/user-attachments/assets/1fd7e709-9210-46c7-b4b1-8fac55638a89)
 
 
+---
+## 🔒 Bảo Mật
+- Data Validation: kiểm tra xem dữ liệu người dùng nhập có hợp lệ không (email, số, không để trống,...)
+  ![image](https://github.com/user-attachments/assets/848702d6-4e36-426a-aaa3-e4603270c31a)
 
+- Authentication: Kiểm tra xem người dùng đã đăng nhập chưa
+  ![image](https://github.com/user-attachments/assets/cfff8689-b67d-4cad-9af0-33f9804f1d53)
 
-
-
-
-
-
-
+- Authorisation: Giới hạn quyền sử dụng theo vai trò (admin, users)
+  ![image](https://github.com/user-attachments/assets/404c8c29-87b8-4e4d-b779-da6b335b7c19)
 
 
 ---
 ## 🖼️ Giao Diện Chức Năng
-
  ### 🔐 Admin
  - **Đăng nhập**
   ![image](https://github.com/user-attachments/assets/6f7322ae-85f8-4e69-8545-6e2e8b879887)
@@ -114,7 +117,7 @@ php artisan serve
   ![image](https://github.com/user-attachments/assets/6608ddc4-eb84-4253-b12a-850113f4bbec)
 
  - **Quản lý lịch chiếu**  
-  ![image](https://github.com/user-attachments/assets/2bc01500-0563-499e-a376-61a4a41e727b)
+  ![image](https://github.com/user-attachments/assets/9101ace5-663e-429f-84b1-e0ba861523ad)
 
  - **Quản lý phòng chiếu**
   ![image](https://github.com/user-attachments/assets/96a1f827-d669-4b7f-a8e3-734b1f1de0cd)
@@ -133,12 +136,10 @@ php artisan serve
 
 
 ---
-
  ### 👤 Người Dùng
 
  - **Đăng nhập**  
   ![image](https://github.com/user-attachments/assets/b2698862-d83c-4686-a04f-7dbbdf946b4b)
-
 
  - **Trang chủ**  
   ![image](https://github.com/user-attachments/assets/7ce9b688-8e8f-4ab2-8407-891e6f8b16ac)
@@ -146,31 +147,19 @@ php artisan serve
  - **Xem lịch chiếu**
   ![image](https://github.com/user-attachments/assets/2a9146ed-b8c7-4348-a42c-b6748e568272)
 
-
-
  - **Giá vé**
   ![image](https://github.com/user-attachments/assets/50d3ae01-625e-495a-9659-a487ce70b2f8)
 
  - **Tin tức**
   ![image](https://github.com/user-attachments/assets/c607b6de-e909-494f-b46d-600602dff471)
 
-
  - **Đặt vé**  
   
-
  - **Đổi mật khẩu**
   ![image](https://github.com/user-attachments/assets/931bf0fd-c22d-43ef-ab3e-f09900f0cabf)
 
   
-
-
 ---
-## 🔒 Bảo Mật
-- 🔢 Data Validation 
-
-
----
-
 ## 🔗 Liên Kết
 - 🔗 GitHub Page: https://github.com/TranDucLong040904
 - 🔗 GitHub Project: https://github.com/TranDucLong040904/Project_PHP_Laravel_Test.git
