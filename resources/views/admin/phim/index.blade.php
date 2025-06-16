@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
 </head>
 <body>
+@if(Auth::check() && Auth::user()->role == 1)
     <div class="sidebar" id="sidebar">
         <button class="closebtn" onclick="closeNav()">Close</button>
         <div class="user-info">
-            <img src="images/admin.png" alt="">
-            <p>Hi!</p>
+            <img src="{{ asset('images/admin.png') }}" alt="">
+            <p>Hi, {{ explode(' ', Auth::user()->name)[count(explode(' ', Auth::user()->name)) - 1] }}!</p>
+            <a href="{{ route('logoutAdmin') }}">Đăng xuất</a>
         </div>
 
         <ul class="menu">
@@ -29,6 +31,12 @@
     </div>
 
     <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+@else
+    <h1 align="center">Xin Chào Admin</h1>
+    <p align="center"><a class="btn-Login" href="{{ route('login') }}">Đăng nhập</a></p>
+@endif
+
+@if(Auth::check() && Auth::user()->role == 1)
     <h1>Danh Sách Phim</h1> 
     @if(session('success'))
         <div class="alert alert-success">
@@ -41,7 +49,7 @@
         </div>  
     @endif
     <a href="{{ route('phim.create') }}">Thêm Mới</a>
-    <a href="{{ route('phim.show') }}">Kich Hoạt</a>
+    <a href="{{ route('phim.show') }}">Kích Hoạt</a>
     <table border="1">  
         <thead>  
             <tr>  
@@ -68,27 +76,21 @@
                     <td>{{ $phim->NAMPH }}</td>  
                     <td>{{ $phim->DESCRIP }}</td>  
                     <td>{{ $phim->DIENVIEN }}</td>  
-                    <td>  
-                        <img src="{{ asset('images/'.$phim->POSTER) }}" alt="{{ $phim->TENPHIM }}" style="width: 100px; height: auto;">  
-                    </td>  
-                    <td>{{ $phim->status == 0 ? 'Active' : 'Inactive'}}</td>  
+                    <td><img src="{{ asset('images/'.$phim->POSTER) }}" alt="{{ $phim->TENPHIM }}" style="width: 100px;"></td>  
+                    <td>{{ $phim->status == 0 ? 'Active' : 'Inactive' }}</td>  
+                    <td><a href="{{ route('phim.edit', $phim->IDPHIM) }}">Sửa</a></td>  
                     <td>
-                        <a href="{{ route('phim.edit', $phim->IDPHIM) }}">Sửa</a>
-                    </td>
-                    <td>  
                         <form method="POST" action="{{ route('phim.destroy', $phim->IDPHIM) }}" class="delete-form">  
                             @csrf  
                             @method('DELETE')  
-                            <button type="submit" class="btn-delete" data-id="{{ $phim->IDPHIM }}">  
-                                Xóa  
-                            </button>  
+                            <button type="submit" class="btn-delete" data-id="{{ $phim->IDPHIM }}">Xóa</button>  
                         </form>  
                     </td>
                 </tr>  
             @endforeach  
         </tbody>  
-    </table>  
-</body>  
+    </table>
+@endif
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -96,37 +98,32 @@
 
         deleteForms.forEach(form => {
             form.addEventListener('submit', function(event) {
-                const button = event.submitter; // Nút đã kích hoạt form submission
+                const button = event.submitter;
                 const hasShowtime = button.getAttribute('data-has-showtime') === 'true';
-                const row = form.closest('tr'); // Tìm dòng <tr> chứa form
+                const row = form.closest('tr');
 
                 if (hasShowtime) {
-                    // Nếu phim còn lịch chiếu, ngăn gửi form và hiển thị thông báo
-                    event.preventDefault(); // Ngăn gửi form
+                    event.preventDefault();
                     alert('Phim vẫn còn lịch chiếu, không thể xóa.');
                 } else {
-                    // Nếu không có lịch chiếu, cho phép gửi form và ẩn dòng
                     if (confirm('Bạn có chắc muốn xóa phim này không?')) {
-                        row.style.display = 'none'; // Ẩn dòng phim
-                        form.submit(); // Tiến hành gửi form
+                        row.style.display = 'none';
+                        form.submit();
                     } else {
-                        event.preventDefault(); // Nếu người dùng hủy, ngừng gửi form
+                        event.preventDefault();
                     }
                 }
             });
         });
     });
-</script>
-<script>
-        function openNav() {
-            document.getElementById("sidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
 
-        function closeNav() {
-            document.getElementById("sidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
+    function openNav() {
+        document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
 </body>
 </html>

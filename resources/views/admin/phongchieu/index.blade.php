@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phòng chiếu</title>
-    <link rel="stylesheet" href="{{asset('css/index.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 <body>
+
+@if(Auth::check() && Auth::user()->role == 1)
     <div class="sidebar" id="sidebar">
         <button class="closebtn" onclick="closeNav()">Close</button>
         <div class="user-info">
             <img src="images/admin.png" alt="">
-            <p>Hi!</p>
+            <p>Hi, {{ explode(' ', Auth::user()->name)[count(explode(' ', Auth::user()->name)) - 1] }}!</p>
+            <a href="{{ route('logoutAdmin') }}">Đăng xuất</a>
         </div>
 
         <ul class="menu">
@@ -31,6 +34,7 @@
     <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button> 
     <div class="container mt-5">  
         <h2>Danh Sách Phòng Chiếu</h2> 
+
         @if(session('success'))  
             <div class="alert alert-success">  
                 {{ session('success') }}  
@@ -41,8 +45,10 @@
                 {{ session('error') }}  
             </div>  
         @endif 
-        <a href="{{route('phongchieu.create')}}" class="btn btn-success">Thêm Mới</a>
-        <a href="{{route('phongchieu.show')}}" class="btn btn-success">Kích Hoạt</a>
+
+        <a href="{{ route('phongchieu.create') }}" class="btn btn-success">Thêm Mới</a>
+        <a href="{{ route('phongchieu.show') }}" class="btn btn-success">Kích Hoạt</a>
+
         <table class="table">  
             <thead>  
                 <tr>   
@@ -67,49 +73,50 @@
                                     Xóa  
                                 </button>  
                             </form>
-
                         </td>
                     </tr>  
                 @endforeach  
             </tbody>  
         </table>  
     </div>  
-</body>  
+
+@else
+    <h1 align="center">Xin chào, bạn không có quyền truy cập!</h1>
+    <p align="center"><a class="btn-Login" href="{{ route('login') }}">Đăng nhập</a></p>
+@endif
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const deleteForms = document.querySelectorAll('.delete-form');
 
         deleteForms.forEach(form => {
             form.addEventListener('submit', function(event) {
-                const button = event.submitter; // Nút đã kích hoạt form submission
+                const button = event.submitter;
                 const hasShowtime = button.getAttribute('data-has-showtime') === 'true';
-                const row = form.closest('tr'); // Tìm dòng <tr> chứa form
+                const row = form.closest('tr');
 
                 if (hasShowtime) {
-                    // Nếu phim còn lịch chiếu, ngăn gửi form và hiển thị thông báo
-                    event.preventDefault(); // Ngăn gửi form
+                    event.preventDefault();
+                    alert('Phòng chiếu vẫn còn lịch chiếu, không thể xóa.');
                 } else {
-                    // Nếu không có lịch chiếu, cho phép gửi form và ẩn dòng
                     if (confirm('Bạn có chắc muốn xóa phòng chiếu này không?')) {
-                        row.style.display = 'none'; // Ẩn dòng phim
-                        form.submit(); // Tiến hành gửi form
+                        row.style.display = 'none';
+                        form.submit();
                     } else {
-                        event.preventDefault(); // Nếu người dùng hủy, ngừng gửi form
+                        event.preventDefault();
                     }
                 }
             });
         });
     });
-</script>
-<script>
-        function openNav() {
-            document.getElementById("sidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
 
-        function closeNav() {
-            document.getElementById("sidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
+    function openNav() {
+        document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
+</body>
 </html>

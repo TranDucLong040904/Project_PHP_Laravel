@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khách hàng</title>
-    <link rel="stylesheet" href="{{asset('css/index.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 <body>
+
+@if(Auth::check() && Auth::user()->role == 1)
     <div class="sidebar" id="sidebar">
         <button class="closebtn" onclick="closeNav()">Close</button>
         <div class="user-info">
             <img src="images/admin.png" alt="">
-            <p>Hi!</p>
+            <p>Hi, {{ explode(' ', Auth::user()->name)[count(explode(' ', Auth::user()->name)) - 1] }}!</p>
+            <a href="{{ route('logoutAdmin') }}">Đăng xuất</a>
         </div>
 
         <ul class="menu">
@@ -30,13 +33,16 @@
 
     <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>  
     <h1>Danh Sách Tài Khoản</h1> 
+
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif 
-    <a href="{{ route('taikhoan.show') }}">Kich Hoạt</a> 
-    <table border = 1>  
+
+    <a href="{{ route('taikhoan.show') }}">Kích Hoạt</a> 
+
+    <table border="1">  
         <thead>  
             <tr>  
                 <th>Name</th>  
@@ -66,44 +72,43 @@
             @endforeach  
         </tbody>  
     </table>  
-  
+@else
+    <h1 align="center">Xin chào, bạn không có quyền truy cập!</h1>
+    <p align="center"><a class="btn-Login" href="{{ route('login') }}">Đăng nhập</a></p>
+@endif
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const deleteForms = document.querySelectorAll('.delete-form');
 
         deleteForms.forEach(form => {
             form.addEventListener('submit', function(event) {
-                const button = event.submitter; // Nút đã kích hoạt form submission
+                const button = event.submitter;
                 const hasShowtime = button.getAttribute('data-has-showtime') === 'true';
-                const row = form.closest('tr'); // Tìm dòng <tr> chứa form
+                const row = form.closest('tr');
 
                 if (hasShowtime) {
-                    // Nếu phim còn lịch chiếu, ngăn gửi form và hiển thị thông báo
-                    event.preventDefault(); // Ngăn gửi form
+                    event.preventDefault();
                     alert('Phim vẫn còn lịch chiếu, không thể xóa.');
                 } else {
-                    // Nếu không có lịch chiếu, cho phép gửi form và ẩn dòng
                     if (confirm('Bạn có chắc muốn khóa tài khoản này không?')) {
-                        row.style.display = 'none'; // Ẩn dòng phim
-                        form.submit(); // Tiến hành gửi form
+                        row.style.display = 'none';
+                        form.submit();
                     } else {
-                        event.preventDefault(); // Nếu người dùng hủy, ngừng gửi form
+                        event.preventDefault();
                     }
                 }
             });
         });
     });
-</script>
-<script>
-        function openNav() {
-            document.getElementById("sidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
 
-        function closeNav() {
-            document.getElementById("sidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
+    function openNav() {
+        document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
 </body>
 </html>
