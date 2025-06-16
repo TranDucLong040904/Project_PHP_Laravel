@@ -56,7 +56,47 @@ php artisan serve
 ```
 ---
 ## 🗃️ Sơ đồ khối
-  
+   ![image](https://github.com/user-attachments/assets/df8747f2-d454-473b-afcd-35e4fa816f7c)
+---
+
+## ⚙️Sơ đồ chức năng
+### 🔐 Admin
+  ![image](https://github.com/user-attachments/assets/44d19e96-6cd5-4c89-935c-c9282106288c)
+
+### 👤 Người Dùng
+  ![image](https://github.com/user-attachments/assets/152fe61a-502c-4cd4-bd5a-cefc9662386f)
+
+### Guest 
+  ![image](https://github.com/user-attachments/assets/d89621d8-3359-4229-8f2a-3b63ba3df540)
+
+---
+## 🧠Sơ đồ thuật toán
+## Đăng kí
+ ![image](https://github.com/user-attachments/assets/2afdad27-95c8-4830-b378-a0c8882c5df0)
+
+## Đăng nhập
+ ![image](https://github.com/user-attachments/assets/382f3fbb-4ac1-4d16-aa10-566cc0b791fc)
+
+## Thêm dữ liệu
+ ![image](https://github.com/user-attachments/assets/d2601c43-fb71-4f2f-b8f4-ddb9556fe528)
+
+## Sửa dữ liệu
+ ![image](https://github.com/user-attachments/assets/3520270d-005b-4342-9d77-bf01d006f021)
+
+## Xóa dữ liệu
+ ![image](https://github.com/user-attachments/assets/786b78d2-7375-4f70-95a5-66757091e359)
+
+## Đặt vé
+ ![image](https://github.com/user-attachments/assets/1fd7e709-9210-46c7-b4b1-8fac55638a89)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,10 +141,11 @@ php artisan serve
 
 
  - **Trang chủ**  
-  ![image](https://github.com/user-attachments/assets/33c20a92-94b7-4289-9895-b47f701249c3)
+  ![image](https://github.com/user-attachments/assets/7ce9b688-8e8f-4ab2-8407-891e6f8b16ac)
 
  - **Xem lịch chiếu**
-  ![image](https://github.com/user-attachments/assets/59420a13-5e2e-492f-8ba7-9ef9b9c3482e)
+  ![image](https://github.com/user-attachments/assets/2a9146ed-b8c7-4348-a42c-b6748e568272)
+
 
 
  - **Giá vé**
