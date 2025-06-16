@@ -16,7 +16,7 @@ class PasswordController extends Controller
 
     // Xử lý đổi mật khẩu
     public function update(Request $request)
-    {
+    {   
         $request->validate([
             'current_password' => 'required',
             'password' => 'required|string|min:8|confirmed',
