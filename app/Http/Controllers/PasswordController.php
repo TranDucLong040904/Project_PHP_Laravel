@@ -31,7 +31,11 @@ class PasswordController extends Controller
 
         // Cập nhật mật khẩu
         Auth::user()->update([
-            'password' => Hash::make($request->password),
+            // Show mật khẩu mã hóa
+            // 'password' => Hash::make($request->password),
+
+            //Show mật khẩu gốc
+            'password' => $request->password,
         ]);
 
         return redirect()->route('password.edit')->with('status', 'Đổi mật khẩu thành công.');

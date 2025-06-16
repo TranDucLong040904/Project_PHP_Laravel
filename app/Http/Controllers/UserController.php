@@ -31,7 +31,12 @@ class UserController extends Controller
         ]);
 
         $data = $request->all();
-        $data['password'] = Hash::make($request->password);
+        // Show mật khẩu mã hóa
+        // $data['password'] = Hash::make($request->password);
+
+        // Show mật khẩu gốc
+        $data['password'] = $request->password;
+
         $data['status'] = 0;
 
         try {

@@ -10,7 +10,7 @@
         <button class="closebtn" onclick="closeNav()">Close</button>
         <div class="user-info">
             <img src="images/admin.png" alt="">
-            <p>Hi, Thang!</p>
+            <p>Hi!</p>
         </div>
 
         <ul class="menu">

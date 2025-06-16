@@ -144,7 +144,7 @@
                             </div>
             
                             <div class="title">
-                                <h1>Group 15 cinema</h1>
+                                <h1>WebCinema</h1>
                             </div>
             
                             <div class="schedule">
@@ -218,7 +218,7 @@
 </div>
 
         <footer>
-            <span class="footer-title">Group 15 Cinema</span>
+            <span class="footer-title">WebCinema</span>
             <ul class="socials">
                 <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
