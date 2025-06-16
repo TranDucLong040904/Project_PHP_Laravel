@@ -151,7 +151,7 @@ php artisan serve
  - **Giá vé**
   ![image](https://github.com/user-attachments/assets/50d3ae01-625e-495a-9659-a487ce70b2f8)
 
-- **Tin tức**
+ - **Tin tức**
   ![image](https://github.com/user-attachments/assets/c607b6de-e909-494f-b46d-600602dff471)
 
 
@@ -166,14 +166,12 @@ php artisan serve
 
 ---
 ## 🔒 Bảo Mật
-- 1
-- 2
-- 3
-
+- 
 
 ---
 
 ## 🔗 Liên Kết
-- 🔗 GitHub: https://github.com/TranDucLong040904
+- 🔗 GitHub Page: https://github.com/TranDucLong040904
+- 🔗 GitHub Project: https://github.com/TranDucLong040904/Project_PHP_Laravel_Test.git
 - ▶️ YouTube Demo: https://www.youtube.com/@tranuclong1175
 
