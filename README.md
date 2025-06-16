@@ -175,5 +175,5 @@ php artisan serve
 
 ## 🔗 Liên Kết
 - 🔗 GitHub: https://github.com/TranDucLong040904
-- ▶️ YouTube Demo:
+- ▶️ YouTube Demo: https://www.youtube.com/@tranuclong1175
 
