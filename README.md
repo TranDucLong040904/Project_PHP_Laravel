@@ -166,7 +166,8 @@ php artisan serve
 
 ---
 ## 🔒 Bảo Mật
-- CSRF: 
+- 🔢 Data Validation 
+
 
 ---
 
