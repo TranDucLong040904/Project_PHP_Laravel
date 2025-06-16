@@ -5,11 +5,19 @@ WebCinema là một hệ thống đặt vé xem phim trực tuyến, hỗ trợ 
 ---
 
 ## 🚀 Tính Năng Chính
+### 🔐 Admin
+- Đăng kí - Đăng nhập
+- Quản lý phim ( Thêm, sử, xóa, kích hoạt phim)
+- Quản lý thể loại phim (Thêm, sửa, xóa thể loại phim)
+- Quản lý lịch chiếu phim (Thêm, sửa, xóa lịch chiếu phim)
+- Quản lý phòng chiếu phim (Thêm, sửa, xóa phòng chiếu phim)
+- Quản lý đồ uống (Thêm, sửa, xóa đồ uống)
+- Quản lý ghế ngồi (Sửa, thay đổi giá ghế)
+- Quản lý phương thức thanh toán (Thêm, sửa, xóa phương thức thanh toán)
+- Quản lý tài khoản User (Kích hoạt, khóa tài khoản người dùng)
 
-- Xem danh sách phim đang chiếu và sắp chiếu  
-- Đặt vé xem phim theo suất chiếu  
-- Quản lý phòng chiếu, suất chiếu, người dùng  
-- Trang quản trị dành cho Admin  
+### 👤 Người Dùng
+  
 
 ---
 
