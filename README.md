@@ -17,7 +17,10 @@ WebCinema là một hệ thống đặt vé xem phim trực tuyến, hỗ trợ 
 - Quản lý tài khoản User (Kích hoạt, khóa tài khoản người dùng)
 
 ### 👤 Người Dùng
-  
+- Đăng kí - Đăng nhập
+- Xem thông tin phim đang chiếu, sắp chiếu
+- Đặt vé
+- Đổi mật khẩu  
 
 ---
 
