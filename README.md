@@ -151,10 +151,12 @@ php artisan serve
   ![image](https://github.com/user-attachments/assets/50d3ae01-625e-495a-9659-a487ce70b2f8)
 
  - **Tin tức**
-  ![image](https://github.com/user-attachments/assets/c607b6de-e909-494f-b46d-600602dff471)
+  ![image](https://github.com/user-attachments/assets/312878d5-9e9f-43ca-a2bb-12f17b19957f)
 
- - **Đặt vé**  
-  
+ - **Đặt vé**
+  ![image](https://github.com/user-attachments/assets/ed2593e1-e8d2-4ce0-aa58-9d6e946fff96)
+  ![image](https://github.com/user-attachments/assets/6d8fdfbb-2e0c-4fc8-a140-a06da04f5725)
+
  - **Đổi mật khẩu**
   ![image](https://github.com/user-attachments/assets/931bf0fd-c22d-43ef-ab3e-f09900f0cabf)
 
