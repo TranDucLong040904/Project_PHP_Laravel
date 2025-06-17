@@ -53,7 +53,7 @@
         <thead>
             <tr>
                 <th>Tên thể loại</th>
-                <th>Sửa</th>
+                <th style="">Sửa</th>
                 <th>Xóa</th>
             </tr>
         </thead>
@@ -62,7 +62,7 @@
                 <tr>
                     <td>{{ $category->TENTHELOAI }}</td> 
                     <td>
-                        <a href="{{ route('theloai.edit', $category->IDTHELOAI) }}" class="btn btn-warning">Sửa</a>
+                        <a href="{{ route('theloai.edit', $category->IDTHELOAI) }}" class="btn btn-warning" style="color: blue;">Sửa</a>
                     </td>
                     <td>
                         <form method="POST" action="{{ route('theloai.destroy', $category->IDTHELOAI) }}" class="delete-form">
