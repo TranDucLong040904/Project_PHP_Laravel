@@ -53,7 +53,7 @@
         <thead>
             <tr>
                 <th>Tên thể loại</th>
-                <th style="">Sửa</th>
+                <th>Sửa</th>
                 <th>Xóa</th>
             </tr>
         </thead>
