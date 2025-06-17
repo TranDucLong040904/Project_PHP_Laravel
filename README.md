@@ -43,8 +43,8 @@ WebCinema là một hệ thống đặt vé xem phim trực tuyến, hỗ trợ 
 ## 🧩 Cài Đặt & Khởi Chạy
 
 ```bash
-git clone https://github.com/TranDucLong040904/Project_PHP_Laravel_Test.git
-cd Project_PHP_Laravel_Test
+git clone https://github.com/TranDucLong040904/Project_PHP_Laravel.git
+cd Project_PHP_Laravel
 composer install
 
 # Cấu hình thông tin database trong file .env
