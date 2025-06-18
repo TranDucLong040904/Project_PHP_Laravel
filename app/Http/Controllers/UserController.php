@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Hash;
-use Auth;
-use App\Models\User;
+use Illuminate\Support\Facades\Hash; 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
+
 
 class UserController extends Controller
 {
@@ -32,10 +33,10 @@ class UserController extends Controller
 
         $data = $request->all();
         // Show mật khẩu mã hóa
-        // $data['password'] = Hash::make($request->password);
+        $data['password'] = Hash::make($request->password);
 
         // Show mật khẩu gốc
-        $data['password'] = $request->password;
+        // $data['password'] = $request->password;
 
         $data['status'] = 0;
 

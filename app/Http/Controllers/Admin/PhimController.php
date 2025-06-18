@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Movie;
@@ -45,8 +45,6 @@ class PhimController extends Controller
      */
     public function store(Request $request)
     {
-          
-
         $request->validate([  
             'TENPHIM' => 'required|unique:phim,TENPHIM|max:255',  
             'POSTER' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',  
@@ -80,7 +78,7 @@ class PhimController extends Controller
 
         $phim->save(); // Lưu vào cơ sở dữ liệu  
 
-        \Log::info('Phim đã thêm thành công:', ['id' => $phim->id]); // Ghi lại id của phim mới đã thêm  
+        Log::info('Phim đã thêm thành công:', ['id' => $phim->id]); // Ghi lại id của phim mới đã thêm  
 
         return redirect()->route('phim.index')->with('success', 'Phim đã được thêm thành công!');  
     
@@ -146,7 +144,7 @@ class PhimController extends Controller
         // Lưu thông tin phim đã sửa
         $phim->save();
 
-        \Log::info('Phim đã sửa thành công:', ['id' => $phim->IDPHIM]); // Log thông tin phim
+        Log::info('Phim đã sửa thành công:', ['id' => $phim->IDPHIM]); // Log thông tin phim
 
         // Redirect về trang danh sách phim và thông báo thành công
         return redirect()->route('phim.index')->with('success', 'Phim đã được sửa thành công!');

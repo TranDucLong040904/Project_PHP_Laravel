@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Hash;
-use Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class PasswordController extends Controller
@@ -32,10 +32,10 @@ class PasswordController extends Controller
         // Cập nhật mật khẩu
         Auth::user()->update([
             // Show mật khẩu mã hóa
-            // 'password' => Hash::make($request->password),
+            'password' => Hash::make($request->password),
 
             //Show mật khẩu gốc
-            'password' => $request->password,
+            // 'password' => $request->password,
         ]);
 
         return redirect()->route('password.edit')->with('status', 'Đổi mật khẩu thành công.');

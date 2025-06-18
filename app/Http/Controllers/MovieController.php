@@ -10,6 +10,7 @@ use App\Models\Movie;
 
 class MovieController extends Controller
 {
+    //Hiển thị danh sách phim
     public function showMovies()
     {
         // Truy vấn lấy danh sách phim và thông tin thể loại
@@ -22,6 +23,7 @@ class MovieController extends Controller
                     ])
                     ->get();
 
+        // Truy vấn lấy danh sách phim đã công chiếu và lịch chiếu
         $movies = DB::table('phim')
                     ->join('theloai', 'phim.IDTHELOAI', '=', 'theloai.IDTHELOAI')
                     ->join('lichchieu', 'phim.IDPHIM', '=', 'lichchieu.IDPHIM')
@@ -46,7 +48,7 @@ class MovieController extends Controller
                     ->orderBy('lichchieu.XUATCHIEU', 'asc')
                     ->get()
                     ->groupBy('IDPHIM');
-
+                        
         $lichChieuList = DB::table('lichchieu')
                     ->select('IDLICHCHIEU', 'IDPHONGCHIEU', 'IDPHIM', 'XUATCHIEU', 'status')
                     ->where([
@@ -58,6 +60,7 @@ class MovieController extends Controller
         return view('home', compact('comingsoons', 'movies', 'showtimes', 'lichChieuList'));
     }
 
+    // Hiển thị chi tiết phim
     public function detailMovie($id)
     {
         // Tương tự như trên, sử dụng Query Builder để lấy chi tiết phim
