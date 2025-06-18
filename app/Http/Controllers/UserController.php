@@ -15,6 +15,7 @@ class UserController extends Controller
         return view('login.user_login');
     }
 
+    //Dùng để đăng ký tài khoản
     public function postRegister(Request $request)
     {
         $request->validate([
@@ -38,6 +39,7 @@ class UserController extends Controller
         // Show mật khẩu gốc
         // $data['password'] = $request->password;
 
+        // Show role mặc định là 0 (người dùng thông thường)
         $data['status'] = 0;
 
         try {
@@ -49,12 +51,12 @@ class UserController extends Controller
         return redirect()->route('login')->with('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
     }
 
-
+    //Dùng để đăng nhập tài khoản
     public function postLogin(Request $request)
     {
         // Lấy thông tin người dùng từ cơ sở dữ liệu
         $user = DB::table('users')->where('email', $request->email)->first();
-    
+        
         if ($user && Hash::check($request->password, $user->password)) {
             // Kiểm tra nếu tài khoản bị vô hiệu hóa
             if ($user->status == 1) {
