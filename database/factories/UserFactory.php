@@ -29,10 +29,10 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             
             // Show mật khẩu mã hóa
-            //'password' => static::$password ??= Hash::make('password'),
+            'password' => static::$password ??= Hash::make('password'),
 
             // Show mật khẩu gốc
-            'password' => 'password',
+            // 'password' => 'password',
 
             'remember_token' => Str::random(10),
         ];
