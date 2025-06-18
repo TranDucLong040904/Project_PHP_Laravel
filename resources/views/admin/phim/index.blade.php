@@ -67,6 +67,7 @@
             </tr>  
         </thead>  
         <tbody>  
+            //Hiển thị danh sách phim
             @foreach ($phims as $phim)  
                 <tr>  
                     <td>{{ $phim->TENPHIM }}</td>  

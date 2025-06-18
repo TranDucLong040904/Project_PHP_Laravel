@@ -34,7 +34,7 @@
                         <td>
                             <form method="POST" action="{{ route('phongchieu.kichHoat', $phongChieu->IDPHONGCHIEU) }}" class="delete-form">  
                                 @csrf  
-                                @method('DELETE')  
+                                @method('PUT')  
                                 <button type="submit" class="btn-delete" data-id="{{ $phongChieu->IDPHONGCHIEU }}">  
                                     Kích Hoạt  
                                 </button>  

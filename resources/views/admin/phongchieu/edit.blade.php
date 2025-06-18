@@ -21,10 +21,14 @@
             </div>  
         @endif  
 
-        <form action="{{ route('phongchieu.update', $phongChieu->IDPHONGCHIEU) }}" method="POST">  
+        <!-- <form action="{{ route('phongchieu.update', $phongChieu->IDPHONGCHIEU) }}" method="POST">  
             @csrf  
-            @method('POST') <!-- Nếu bạn đang xử lý HTTP POST -->  
-            
+            @method('POST') <!-- Nếu bạn đang xử lý HTTP POST -->   -->
+        
+        <form action="{{ route('phongchieu.update', $phongChieu->IDPHONGCHIEU) }}" method="POST">
+            @csrf
+            @method('PUT')  
+
             <div class="form-group">  
                 <label for="TENPHONGCHIEU">Tên Phòng Chiếu</label>  
                 <input type="text" class="form-control" id="TENPHONGCHIEU" name="TENPHONGCHIEU" value="{{ old('TENPHONGCHIEU', $phongChieu->TENPHONGCHIEU) }}" required>  
