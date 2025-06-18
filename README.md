@@ -106,7 +106,7 @@ php artisan serve
 
 ---
 ## 🖼️ Giao Diện Chức Năng
- ### 🔐 Admin
+### 🔐 Admin
  - **Đăng nhập**
   ![image](https://github.com/user-attachments/assets/6f7322ae-85f8-4e69-8545-6e2e8b879887)
 
@@ -136,7 +136,7 @@ php artisan serve
 
 
 ---
- ### 👤 Người Dùng
+### 👤 Người Dùng
 
  - **Đăng nhập**  
   ![image](https://github.com/user-attachments/assets/b2698862-d83c-4686-a04f-7dbbdf946b4b)
