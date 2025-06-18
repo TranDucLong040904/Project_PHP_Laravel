@@ -34,11 +34,11 @@ Route::get('/bang-gia', function () {
 })->name('prices');
 
 //Đăng nhập, đăng ký
-Route::get('/login', [UserController::class, 'login'])->name('login');
-Route::post('/login', [UserController::class, 'postLogin']);
+Route::get('/login', [UserController::class, 'login'])->name('login'); // Hiển thị form đăng nhập
+Route::post('/login', [UserController::class, 'postLogin']); // Xử lý đăng nhập
 
-Route::post('/register', [UserController::class, 'postRegister'])->name('register');
-Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+Route::post('/register', [UserController::class, 'postRegister'])->name('register'); // Xử lý đăng ký
+Route::get('/logout', [UserController::class, 'logout'])->name('logout'); // Đăng xuất
 
 //Đổi mk
 Route::get('/change-password', [PasswordController::class, 'edit'])->name('password.edit');
@@ -69,33 +69,34 @@ Route::get('/logout-admin', [UserController::class, 'logoutAdmin'])->name('logou
 
 //Trang chủ admin
 Route::get('admin', [DashboardController::class, 'index'])->name('admin.index');
-// quản lý phim
-Route::get('/phim', [PhimController::class, 'index'])->name('phim.index'); 
-Route::get('/phim/create', [PhimController::class, 'create'])->name('phim.create');  
-Route::post('/phim', [PhimController::class, 'store'])->name('phim.store');  
-Route::delete('/phim/{id}', [PhimController::class, 'destroy'])->name('phim.destroy');
-Route::get('/phim/inactive', [PhimController::class, 'show'])->name('phim.show');
-Route::delete('/phim/kichHoat/{id}', [PhimController::class, 'kichHoat'])->name('phim.kichHoat');
-Route::get('/phim/{id}/edit', [PhimController::class, 'edit'])->name('phim.edit');
-Route::put('/phim/{id}', [PhimController::class, 'update'])->name('phim.update');
+
+// Quản lý phim
+Route::get('/phim', [PhimController::class, 'index'])->name('phim.index'); // Hiển thị danh sách phim
+Route::get('/phim/create', [PhimController::class, 'create'])->name('phim.create');  // Hiển thị form tạo phim
+Route::post('/phim', [PhimController::class, 'store'])->name('phim.store'); // Tạo phim mới 
+Route::delete('/phim/{id}', [PhimController::class, 'destroy'])->name('phim.destroy'); // Xóa phim
+Route::get('/phim/inactive', [PhimController::class, 'show'])->name('phim.show'); // Hiển thị danh sách phim không hoạt động
+Route::delete('/phim/kichHoat/{id}', [PhimController::class, 'kichHoat'])->name('phim.kichHoat');// Kích hoạt phim
+Route::get('/phim/{id}/edit', [PhimController::class, 'edit'])->name('phim.edit'); // Hiển thị form chỉnh sửa phim
+Route::put('/phim/{id}', [PhimController::class, 'update'])->name('phim.update');// Cập nhật thông tin phim
 
 // quản lý thể loại
-Route::get('/theloai', [TheLoaiController::class, 'index'])->name('theloai.index');
-Route::get('/theloai/create', [TheLoaiController::class, 'create'])->name('theloai.create');
-Route::post('/theloai', [TheLoaiController::class, 'store'])->name('theloai.store');
-Route::get('/theloai/{id}/edit', [TheLoaiController::class, 'edit'])->name('theloai.edit');
-Route::put('/theloai/{id}', [TheLoaiController::class, 'update'])->name('theloai.update');
-Route::delete('/theloai/{id}', [TheLoaiController::class, 'destroy'])->name('theloai.destroy');
+Route::get('/theloai', [TheLoaiController::class, 'index'])->name('theloai.index'); // Hiển thị danh sách thể loại phim
+Route::get('/theloai/create', [TheLoaiController::class, 'create'])->name('theloai.create'); // Hiển thị form tạo thể loại
+Route::post('/theloai', [TheLoaiController::class, 'store'])->name('theloai.store'); // Tạo thể loại mới
+Route::get('/theloai/{id}/edit', [TheLoaiController::class, 'edit'])->name('theloai.edit'); // Hiển thị form chỉnh sửa thể loại
+Route::put('/theloai/{id}', [TheLoaiController::class, 'update'])->name('theloai.update'); // Cập nhật thông tin thể loại
+Route::delete('/theloai/{id}', [TheLoaiController::class, 'destroy'])->name('theloai.destroy'); // Xóa thể loại
 
 //quản lý phòng chiếu 
-Route::get('/phongchieu', [PhongChieuController::class, 'index'])->name('phongchieu.index');
-Route::get('/phongchieu/create', [PhongChieuController::class, 'create'])->name('phongchieu.create');  
-Route::post('/phongchieu', [PhongChieuController::class, 'store'])->name('phongchieu.store');
-Route::get('/phongchieu/{id}/edit', [PhongChieuController::class, 'edit'])->name('phongchieu.edit');  
-Route::post('/phongchieu/{id}', [PhongChieuController::class, 'update'])->name('phongchieu.update');
-Route::delete('/phongchieu/{id}', [PhongChieuController::class, 'destroy'])->name('phongchieu.destroy');
-Route::get('/phongchieu/inactive', [PhongChieuController::class, 'show'])->name('phongchieu.show');
-Route::delete('/phongchieu/kichHoat/{id}', [PhongChieuController::class, 'kichHoat'])->name('phongchieu.kichHoat');
+Route::get('/phongchieu', [PhongChieuController::class, 'index'])->name('phongchieu.index'); // Hiển thị danh sách phòng chiếu
+Route::get('/phongchieu/create', [PhongChieuController::class, 'create'])->name('phongchieu.create'); // Hiển thị form tạo phòng chiếu
+Route::post('/phongchieu', [PhongChieuController::class, 'store'])->name('phongchieu.store'); // Tạo phòng chiếu mới
+Route::get('/phongchieu/{id}/edit', [PhongChieuController::class, 'edit'])->name('phongchieu.edit'); // Hiển thị form chỉnh sửa phòng chiếu
+Route::put('/phongchieu/{id}', [PhongChieuController::class, 'update'])->name('phongchieu.update'); // Cập nhật thông tin phòng chiếu
+Route::delete('/phongchieu/{id}', [PhongChieuController::class, 'destroy'])->name('phongchieu.destroy'); // Xóa phòng chiếu
+Route::get('/phongchieu/inactive', [PhongChieuController::class, 'show'])->name('phongchieu.show'); // Hiển thị danh sách phòng chiếu không hoạt động
+Route::put('/phongchieu/kichHoat/{id}', [PhongChieuController::class, 'kichHoat'])->name('phongchieu.kichHoat'); // Kích hoạt phòng chiếu
 
 //Quản lý payment
 Route::get('/paymentmethods', [MethodController::class, 'index'])->name('methods.index');
@@ -108,20 +109,20 @@ Route::get('/paymentmethods/inactive', [MethodController::class, 'show'])->name(
 Route::delete('/paymentmethods/kichHoat/{id}', [MethodController::class, 'kichHoat'])->name('methods.kichHoat');
 
 //Quản lý lịch chiếu
-Route::get('/lichchieu', [LichChieuController::class, 'index'])->name('lichchieu.index');
-Route::get('/lichchieu/create', [LichChieuController::class, 'create'])->name('lichchieu.create');
-Route::post('/lichchieu/store', [LichChieuController::class, 'store'])->name('lichchieu.store');
-Route::get('/lichchieu/{id}/edit', [LichChieuController::class, 'edit'])->name('lichchieu.edit');
-Route::put('/lichchieu/{id}', [LichChieuController::class, 'update'])->name('lichchieu.update');
-Route::delete('/lichchieu/{id}', [LichChieuController::class, 'destroy'])->name('lichchieu.destroy');
-Route::get('/lichchieu/inactive', [LichChieuController::class, 'show'])->name('lichchieu.show');
-Route::delete('/lichchieu/kichHoat/{id}', [LichChieuController::class, 'kichHoat'])->name('lichchieu.kichHoat');
+Route::get('/lichchieu', [LichChieuController::class, 'index'])->name('lichchieu.index'); // Hiển thị danh sách lịch chiếu
+Route::get('/lichchieu/create', [LichChieuController::class, 'create'])->name('lichchieu.create'); // Hiển thị form tạo lịch chiếu
+Route::post('/lichchieu/store', [LichChieuController::class, 'store'])->name('lichchieu.store'); // Tạo lịch chiếu mới
+Route::get('/lichchieu/{id}/edit', [LichChieuController::class, 'edit'])->name('lichchieu.edit'); // Hiển thị form chỉnh sửa lịch chiếu
+Route::put('/lichchieu/{id}', [LichChieuController::class, 'update'])->name('lichchieu.update'); // Cập nhật thông tin lịch chiếu
+Route::delete('/lichchieu/{id}', [LichChieuController::class, 'destroy'])->name('lichchieu.destroy'); // Xóa lịch chiếu
+Route::get('/lichchieu/inactive', [LichChieuController::class, 'show'])->name('lichchieu.show'); // Hiển thị danh sách lịch chiếu không hoạt động
+Route::put('/lichchieu/kichHoat/{id}', [LichChieuController::class, 'kichHoat'])->name('lichchieu.kichHoat'); // Kích hoạt lịch chiếu
 
 //Quản lý tài khoản 
-Route::get('/taikhoan', [TaiKhoanController::class, 'index'])->name('taikhoan.index');
-Route::get('/taikhoan/inactive', [TaiKhoanController::class, 'show'])->name('taikhoan.show');
-Route::delete('/taikhoan/{id}', [TaiKhoanController::class, 'destroy'])->name('taikhoan.destroy'); 
-Route::delete('/taikhoan/kichhoat/{id}', [TaiKhoanController::class, 'kichHoat'])->name('taikhoan.kichHoat'); 
+Route::get('/taikhoan', [TaiKhoanController::class, 'index'])->name('taikhoan.index'); // Hiển thị danh sách tài khoản
+Route::get('/taikhoan/inactive', [TaiKhoanController::class, 'show'])->name('taikhoan.show'); // Hiển thị danh sách tài khoản không hoạt động
+Route::delete('/taikhoan/{id}', [TaiKhoanController::class, 'destroy'])->name('taikhoan.destroy'); // Xóa tài khoản
+Route::put('/taikhoan/kichhoat/{id}', [TaiKhoanController::class, 'kichHoat'])->name('taikhoan.kichHoat'); // Kích hoạt tài khoản
 
 //Quản lý đồ uống
 Route::get('/douong', [DoUongController::class, 'index'])->name('douong.index');
