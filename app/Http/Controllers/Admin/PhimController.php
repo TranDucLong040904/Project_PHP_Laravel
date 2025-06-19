@@ -15,7 +15,7 @@ class PhimController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+    { 
         $phims = Movie::with('theloai')->where('status', 0)->get();   
         return view('admin.phim.index', compact('phims'));
     }
