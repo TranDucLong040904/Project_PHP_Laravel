@@ -164,9 +164,10 @@ class PhimController extends Controller
         $lichChieuCountAfterNow = LichChieu::where('IDPHIM', $id)  
             ->where('XUATCHIEU', '>', Carbon::now())  
             ->count();  
-
+        
+        // Nếu có lịch chiếu sau ngày hiện tại, không cho phép xóa
         if ($lichChieuCountAfterNow > 0) {  
-            return redirect()->back()->with('error', 'Không thể xóa phim vì vẫn còn lịch chiếu sau ngày hiện tại.');  
+            return redirect()->back()->with('error', 'Không thể xóa phim vì vẫn còn lịch chiếu sau ngày hiện tại.'); 
         }  
         
           
