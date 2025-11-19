@@ -482,7 +482,7 @@ CREATE TABLE `phim` (
   `NAMPH` date NOT NULL,
   `POSTER` varchar(100) DEFAULT NULL,
   `DESCRIP` text DEFAULT NULL,
-  `DIENVIEN` varchar(100) NOT NULL,
+  `DIENVIEN` varchar(350) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0
