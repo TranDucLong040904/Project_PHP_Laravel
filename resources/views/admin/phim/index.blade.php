@@ -26,7 +26,7 @@
             <li><a href="{{ route('loaighe.index') }}">Quản lý Loại ghế</a></li>
             <li><a href="{{ route('methods.index') }}">Quản lý phương thức thanh toán</a></li>
             <li><a href="{{ route('taikhoan.index') }}">Quản lý tài khoản</a></li>
-            <!-- <li><a href="{{ route('thongke.index') }}">Thống kê doanh thu</a></li> -->
+            <li><a href="{{ route('thongke.index') }}">Thống kê doanh thu</a></li>
         </ul>
     </div>
 
