@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('NAMPH');
             $table->string('POSTER', 100)->nullable();
             $table->text('DESCRIP')->nullable();
-            $table->string('DIENVIEN', 100);
+            $table->string('DIENVIEN', 350);
             $table->timestamps();
         });
     }
