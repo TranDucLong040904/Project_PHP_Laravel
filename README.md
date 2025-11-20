@@ -164,17 +164,7 @@ WebCinema/
 
 </details>
 
-<details>
-<summary><b>4. Security Mechanisms (Click to view)</b></summary>
-<br>
 
-* **Data Validation:** Input data check.
-    ![image](https://github.com/user-attachments/assets/848702d6-4e36-426a-aaa3-e4603270c31a)
-
-* **Authentication & Authorization:** Verification and Role separation.
-    ![image](https://github.com/user-attachments/assets/cfff8689-b67d-4cad-9af0-33f9804f1d53)
-    ![image](https://github.com/user-attachments/assets/404c8c29-87b8-4e4d-b779-da6b335b7c19)
-</details>
 
 ---
 
