@@ -190,11 +190,10 @@ WebCinema/
 ![image](https://github.com/user-attachments/assets/5c049302-eac9-4724-8660-51a72c44e880)
 
 **5. Thống kê hóa đơn**
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-
+<img width="1899" height="500" alt="image" src="https://github.com/user-attachments/assets/b797820a-afaf-4eeb-8019-272c617ba97a" />
+<img width="1879" height="476" alt="image" src="https://github.com/user-attachments/assets/1fb56082-2e08-4421-8b5c-8e3a6fce3b46" />
+<img width="1871" height="454" alt="image" src="https://github.com/user-attachments/assets/38f4a100-6413-462f-8a5e-81dbb5a77045" />
+<img width="1880" height="638" alt="image" src="https://github.com/user-attachments/assets/172dd8b8-9a5a-42da-8deb-7a3517b8445c" />
 
 </details>
 
