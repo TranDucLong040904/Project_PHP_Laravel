@@ -194,7 +194,10 @@ WebCinema/
 ![image](https://github.com/user-attachments/assets/5c049302-eac9-4724-8660-51a72c44e880)
 
 **5. Invoice Statistics**
-
+<img width="1899" height="500" alt="image" src="https://github.com/user-attachments/assets/729c217b-9c6b-4cfb-959e-7f633363232a" />
+<img width="1879" height="476" alt="image" src="https://github.com/user-attachments/assets/4e639ed0-5756-4565-81e8-0045a8a4af73" />
+<img width="1871" height="454" alt="image" src="https://github.com/user-attachments/assets/cbdfbc3f-d395-48f4-add4-2b38a46f2518" />
+<img width="1880" height="638" alt="image" src="https://github.com/user-attachments/assets/33202970-3733-4b00-9f5d-02ba8f5ebac4" />
 
 </details>
 
