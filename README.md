@@ -1,4 +1,4 @@
-# 🎬 WebCinema - Hệ Thống Đặt Vé Xem Phim Trực Tuyến
+# 🎬 WebCinema - Hệ Thống Đặt Vé Phim Trực Tuyến
 
 <img width="1888" height="787" alt="image" src="https://github.com/user-attachments/assets/632e0f26-19a9-4325-aa27-388b2b65ffff" />
 
