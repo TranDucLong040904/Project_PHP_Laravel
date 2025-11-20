@@ -163,18 +163,6 @@ WebCinema/
 
 </details>
 
-<details>
-<summary><b>4. Cơ chế Bảo mật (Click để xem)</b></summary>
-<br>
-
-* **Data Validation:** Kiểm tra dữ liệu đầu vào.
-    ![image](https://github.com/user-attachments/assets/848702d6-4e36-426a-aaa3-e4603270c31a)
-
-* **Authentication & Authorization:** Xác thực và Phân quyền.
-    ![image](https://github.com/user-attachments/assets/cfff8689-b67d-4cad-9af0-33f9804f1d53)
-    ![image](https://github.com/user-attachments/assets/404c8c29-87b8-4e4d-b779-da6b335b7c19)
-</details>
-
 
 ## 🖼️ Demo Giao Diện
 
