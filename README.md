@@ -88,7 +88,7 @@ System requirements: `PHP >= 8.x`, `MySQL`, `Composer`.
 
 ```bash
 # 1. Clone repository
-git clone [https://github.com/TranDucLong040904/Project_PHP_Laravel.git](https://github.com/TranDucLong040904/Project_PHP_Laravel.git)
+git clone https://github.com/TranDucLong040904/Project_PHP_Laravel.git
 
 # 2. Navigate to project directory
 cd Project_PHP_Laravel
@@ -144,7 +144,7 @@ WebCinema/
 <summary><b>2. Functional Breakdown - Use Case (Click to view)</b></summary>
 <br>
 
-**Admin:**
+**Admin:**  
 ![image](https://github.com/user-attachments/assets/44d19e96-6cd5-4c89-935c-c9282106288c)
 
 **User (Member):**
@@ -192,6 +192,9 @@ WebCinema/
 ![image](https://github.com/user-attachments/assets/fbca5a14-25eb-40a8-bcf4-0e2dc2ab12a8)
 ![image](https://github.com/user-attachments/assets/b2b47b9c-7fa8-493f-8e31-4808e8ba2d16)
 ![image](https://github.com/user-attachments/assets/5c049302-eac9-4724-8660-51a72c44e880)
+
+**5. Invoice Statistics**
+
 
 </details>
 

@@ -84,7 +84,7 @@ Dự án được phát triển dựa trên kiến trúc **MVC** và các công 
 
 ```bash
 # 1. Clone repository
-git clone [https://github.com/TranDucLong040904/Project_PHP_Laravel.git](https://github.com/TranDucLong040904/Project_PHP_Laravel.git)
+git clone https://github.com/TranDucLong040904/Project_PHP_Laravel.git
 
 # 2. Di chuyển vào thư mục
 cd Project_PHP_Laravel
@@ -143,7 +143,7 @@ WebCinema/
 <summary><b>2. Phân rã chức năng - Use Case (Click để xem)</b></summary>
 <br>
 
-**Admin:**
+**Admin:**  
 ![image](https://github.com/user-attachments/assets/44d19e96-6cd5-4c89-935c-c9282106288c)
 
 **User (Thành viên):**
@@ -189,6 +189,13 @@ WebCinema/
 ![image](https://github.com/user-attachments/assets/b2b47b9c-7fa8-493f-8e31-4808e8ba2d16)
 ![image](https://github.com/user-attachments/assets/5c049302-eac9-4724-8660-51a72c44e880)
 
+**5. Thống kê hóa đơn**
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+
 </details>
 
 <details>
@@ -213,6 +220,8 @@ WebCinema/
 
 **5. Đổi mật khẩu**
 ![image](https://github.com/user-attachments/assets/931bf0fd-c22d-43ef-ab3e-f09900f0cabf)
+
+
 
 </details>
 
