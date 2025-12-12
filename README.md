@@ -239,7 +239,7 @@ The project currently does not have a formal LICENSE file. All intellectual prop
 
 ---
 
-## 🔗 References
+## ☎️ Contact
 
 * **GitHub Profile:** [TranDucLong040904](https://github.com/TranDucLong040904)
 * **GitHub Project:** [Project_PHP_Laravel](https://github.com/TranDucLong040904/Project_PHP_Laravel_Test.git)
